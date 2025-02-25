@@ -1,7 +1,20 @@
 name: Repository Events
 on:
   push:
-  pull_request:
+    branches: #order of branches is important cant have ignore at the start otherwise it will break the others
+      - main
+      - "feature/*"
+      - "feature/**"
+      - "!feature/abc"  # ! Ignores 
+      # branches-ignore:
+      #   - feature/featA
+    tags:
+      - v1.*
+      - "!v1.1.1"
+      paths: # Paths are important as we can only run workflow if certain files are added
+        - "**.js"
+        - "!app.js"
+  pull_request: # if we want we can specify branches and paths here also if we would like
     types: [opened, assigned, reopened, synchronize]
   issues:
     types: [opened]

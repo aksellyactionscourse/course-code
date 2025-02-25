@@ -2,7 +2,7 @@ name: Stale Issues & PR's
 
 on:
   schedule:
-    - cron: "0/5 * * * *"
+    - cron: '*/5 * * * *'
 
 jobs:
   stale:

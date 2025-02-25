@@ -1,3 +1,5 @@
+# NOTE: the enviroment option is really useful as we can setup options for dev and stage etc when manually triggering the workflow
+
 name: Manually Triggered
 on:
   workflow_dispatch:

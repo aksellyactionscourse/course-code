@@ -4,7 +4,6 @@ description: "Greet someone and record the time"
 inputs:
   who_to_greet:
     description: "Who to greet"
-    required: true
     default: "World"
 outputs:
   time:
@@ -12,10 +11,9 @@ outputs:
 runs:
   using: "docker"
   image: 'Dockerfile'
-  # using: "node16"
-  main: 'dist/index.js'
-  # pre wont work in private repository
-  # pre: "setup.js"
-  # pre-if: runner.os == 'linux'
-  post: "cleanup.js"
+  args:
+    - ${{ inputs.who_to_greet }}
+  env:
+    HELLO: WORLD
+  post-entrypoint: "/cleanup.sh"
   post-if: runner.os == 'linux'

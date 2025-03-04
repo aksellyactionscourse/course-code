@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "Cleanup"
+echo 'Cleanup'

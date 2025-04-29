@@ -18,6 +18,22 @@ on:
         options:
           - chrome
           - firefox
+          - firefoxa
+          - firefoxs
+          - firefoxd
+          - firefoxf
+          - firefoxg
+          - firefoxh
+          - firefoxj
+          - firefoxk
+          - firefoxl
+          - firefoxz
+          - firefoxx
+          - firefoxc
+          - firefoxv
+          - firefoxb
+          - firefoxn
+          - firefoxm
 
 jobs:
   prepare-matrix:

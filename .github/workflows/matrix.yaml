@@ -34,6 +34,16 @@ on:
           - firefoxb
           - firefoxn
           - firefoxm
+          - aafirefox
+          - ccfirefox
+          - ddfirefox
+          - hhfirefox
+          - jjfirefox
+          - kkfirefox
+          - llfirefox
+          - ttfirefox
+          - fuuirefox
+          - oofirefox
 
 jobs:
   prepare-matrix:

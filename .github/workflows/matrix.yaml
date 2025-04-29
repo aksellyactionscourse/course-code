@@ -10,6 +10,14 @@ on:
         description: Node Version
         default: "14,15,16"
         type: string
+      BROWSER:
+        description: 'Browser'
+        required: true
+        default: 'chrome'
+        type: choice
+        options:
+          - chrome
+          - firefox
 
 jobs:
   prepare-matrix:

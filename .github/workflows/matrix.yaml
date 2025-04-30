@@ -14,21 +14,21 @@ on:
 
 jobs:
   first:
-    if: ${{ github.event.inputs.Tag }} == '@a'
+    if: ${{ github.event.inputs.Tag == '@a' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
   second:
-    if: ${{ github.event.inputs.Tag }} == '@b'
+    if: ${{ github.event.inputs.Tag == '@b' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
   third:
-    if: ${{ github.event.inputs.Tag }} == '@c'
+    if: ${{ github.event.inputs.Tag == '@c' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

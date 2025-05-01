@@ -20,6 +20,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Create a test file
+        run: |
+          echo "This is a test artifact created on the demo branch at $(date)" > test-artifact.txt
+
+      - name: Upload Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results-${{ github.event.inputs.Tag }}
+          path: test-artifact.txt
+          retention-days: 15
+
   second:
     if: ${{ github.event.inputs.Tag == '@b' }}
     runs-on: ubuntu-latest
@@ -27,9 +39,33 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Create a test file
+        run: |
+          echo "This is a test artifact created on the demo branch at $(date)" > test-artifact.txt
+
+      - name: Upload Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results-${{ github.event.inputs.Tag }}
+          path: test-artifact.txt
+          retention-days: 15
+
   third:
     if: ${{ github.event.inputs.Tag == '@c' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Create a test file
+        run: |
+          echo "This is a test artifact created on the demo branch at $(date)" > test-artifact.txt
+
+      - name: Upload Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results-${{ github.event.inputs.Tag }}
+          path: test-artifact.txt
+          retention-days: 15
